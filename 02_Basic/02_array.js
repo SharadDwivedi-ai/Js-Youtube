@@ -14,7 +14,7 @@ const dc_heros = ["Superman", "Flash", "Batman"]
 
 const another_Array = [1,2,3,[4,5,6],7,[6,7,[4,5]]]
 const real_another_array = another_Array.flat(Infinity)
-// console.log(real_another_array);
+console.log(real_another_array);
 
 // console.log(Array.isArray("Sambhu Dubey"));//Check or question about Array
 // console.log(Array.from("Sambhu Dubey"));//Convert string value to Array
