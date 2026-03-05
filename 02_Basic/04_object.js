@@ -5,12 +5,12 @@ const tinderUser = {}
 tinderUser.id = "131313"
 tinderUser.name = "Jony"
 tinderUser.isLoggedIn = false
-console.log(tinderUser);
-console.log(Object.keys(tinderUser));
-console.log(Object.values(tinderUser));
-console.log(Object.entries(tinderUser));
+// console.log(tinderUser);
+// console.log(Object.keys(tinderUser));
+// console.log(Object.values(tinderUser));
+// console.log(Object.entries(tinderUser));
 
-console.log(tinderUser.hasOwnProperty('isLogged'));//Ask the property from object
+// console.log(tinderUser.hasOwnProperty('isLogged'));//Ask the property from object
 
 
 
@@ -38,6 +38,21 @@ const obj4 = {5:"e", 6:"f"}
 
 // const obj3 = {...obj1, ...obj2,...obj4}
 // console.log(obj3);
+
+const course = {
+    coursename:"JS in hindi",
+    price: 999,
+    courseInstructor: "Hitesh",
+}
+// const{courseInstructor}= course
+// console.log(courseInstructor);
+
+// const{courseInstructor: instructor}= course
+// console.log(instructor);
+
+
+
+
 
 
 
