@@ -25,6 +25,8 @@
 // if(balance > 500) console.log("test");
 // if(balance > 500) console.log("test"), console.log("test2"); Not follow this type of coding
 
+// Logical operator
+
 const userLoggedIn = true
 const debitCard = true 
 const loggedFromGoogle = false
