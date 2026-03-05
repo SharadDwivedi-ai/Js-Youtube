@@ -10,7 +10,7 @@ console.log(Object.keys(tinderUser));
 console.log(Object.values(tinderUser));
 console.log(Object.entries(tinderUser));
 
-console.log(tinderUser.hasOwnProperty('isLogged'));
+console.log(tinderUser.hasOwnProperty('isLogged'));//Ask the property from object
 
 
 
@@ -38,6 +38,7 @@ const obj4 = {5:"e", 6:"f"}
 
 // const obj3 = {...obj1, ...obj2,...obj4}
 // console.log(obj3);
+
 
 
 
