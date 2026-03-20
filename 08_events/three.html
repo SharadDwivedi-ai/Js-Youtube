@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser Events</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+        crossorigin="anonymous"></script>
+</head>
+
+<body class="container-fluid">
+    <h1>Welcome to Sharad and Code</h1>
+    <button class="btn btn-primary" id="chalo">Start</button>
+    <button class="btn btn-danger" id="ruko">Stop</button>
+</body>
+<script>
+    //  const timing = function(str){
+        // console.log('Sharad', Date.now());   
+    //     console.log(str, Date.now());
+    //  }
+    //  const intervalID= setInterval(timing, 1000, "Hello! World")
+     
+    //  clearInterval(intervalID)
+    
+    // Add start button to start Interval
+    let intervalid;
+    document.querySelector('#chalo').addEventListener('click', function (){
+    const time = function(){
+        console.log("Hello World", Date.now());  
+    }
+    intervalid = setInterval(time, 2000)
+    
+    });
+    // Stop button to stop interval
+   document.querySelector('#ruko').addEventListener('click', function (){
+        clearInterval(intervalid)
+   })
+</script>
+</html>
