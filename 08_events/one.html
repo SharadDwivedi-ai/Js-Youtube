@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html events</title>
+</head>
+<body style="background-color: darkgray; color: white;">
+    <h1>Amazing Image</h1>
+    <ul id="images">
+        <li><img src="./p1.jpg" width="200px" height="200px" id="p1"  alt="photoshop"></li>
+        <li><img src="./p2.jpg" width="200px" height="200px" id="p2"  alt=""></li>
+        <li><img src="./p3.jpg" width="200px" height="200px" id="p3"  alt=""></li>
+        <li><img src="./p4.jpg" width="200px" height="200px" id="p4" alt=""></li>
+        <li><a href="https://www.pexels.com/" id="pexels" style="color: rgb(1, 41, 41);">Pexels</a></li>
+    </ul>
+</body>
+<script>
+    // In javascript events execute sequentially expect exception
+    // document.getElementById('p3').onclick = function(){alert('CLick to preview')} // not a modern freatures
+    // attachEvent()
+    // jQuery - on
+    // Browser event / Environment event
+    // imp events- type, timestamp, defaultprevented, target, toElement, srcElement, currentTarget, clientx
+    // clienty, screenx, screeny, altkey, ctrlkey, shiftkey, keyCode
+    
+    // document.getElementById('p2').addEventListener('click', function(e){
+    //     console.log(e);
+    // }, false) // Best approach --- false bydefault
+    // Event Propogation - bydefault - (eventbubbling-working on child to parent) and 
+    // other used event capturing - working from parent to child elements.
+    //  document.getElementById('images').addEventListener('click', function(e){
+    //     console.log('click inside the UL');
+    // },true)
+    // document.getElementById('p2').addEventListener('click', function(e){
+    //     console.log('click inside the image2');
+    //     e.stopPropagation() //stop the bubbling in elements
+    // },false)
+
+    // document.getElementById('pexels').addEventListener('click', function (e){
+    //     e.preventDefault()  //stop the default actions 
+    //     console.log('Clicked on Pexels');
+    // }, false)
+
+    
+    document.querySelector('#images').addEventListener('click', function(e){
+        // console.log(e.target.parentNode);
+        console.log(e.target.tagName);        
+        if(e.target.tagName === 'IMG'){
+         console.log(e.target.id);
+         let removeIt = e.target.parentNode; 
+         removeIt.remove()         
+        }
+        // let removeIt = e.target.parentNode;
+        // removeIt.remove() //1st approach
+
+        // removeIt.parentNode.removeChild(removeIt) //2nd approach
+    })
+    
+</script>
+</html>
