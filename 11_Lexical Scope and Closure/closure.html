@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript : Closure</title>
+</head>
+
+<body style="background-color: black; color: white;">
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+</body>
+<script>
+    // Lexical Scope 
+
+    // function init() {
+    //     let name = "Mozilla"; // name is a local variable created by init
+    //     function displayName() {
+    //         // displayName() is the inner function, that forms a closure
+    //         console.log(name); // use variable declared in the parent function
+    //     }
+    //     displayName();
+    // }
+    // init();
+
+    // function outer(){
+    //     let userName = "Sharad"
+    //     function inner(){
+    //         console.log('Inner : ',userName);
+    //     }
+    //     inner()
+    // }
+    // outer()
+    // console.log('Too outer :', userName);
+
+
+    // Closure 
+    // function outer(){
+    //     let userName = "Lexical Scope"
+    //     function inner(){
+    //         console.log('Inner Scope :', userName);
+    //     }
+    //     return inner;                               //Return the complete lexical scope ref
+    // }
+    // const myOuter = outer()
+    // myOuter()
+
+    // Practical implement of closure
+    // document.getElementById('orange').onclick = function(){
+    //     document.body.style.background = 'orange'
+    // }
+
+    // document.getElementById('green').onclick = function(){
+    //     document.body.style.background = 'green'
+    // }
+
+    // Real world example of closure
+    function clickHandler(color){
+        // document.body.style.backgroundColor = `${color}`
+
+        return function(){
+            document.body.style.backgroundColor = `${color}`
+        }
+    }
+    document.getElementById('orange').onclick = clickHandler('orange')
+    document.getElementById('green').onclick = clickHandler('green')
+    
+</script>
+
+</html> 
